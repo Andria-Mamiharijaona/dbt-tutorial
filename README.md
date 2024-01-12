@@ -35,6 +35,7 @@ create enverinoment python for dbt:
     ```
 
 Try running the following commands:
+- dbt run --select elementary
 - dbt run
 - dbt test
 
