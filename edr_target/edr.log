@@ -1,0 +1,81 @@
+2024-01-08 08:03:26 — INFO — Running with edr=0.13.2
+2024-01-08 08:03:26 — INFO — Running dbt --log-format json deps --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:03:36 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'deps', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 3543
+2024-01-08 08:03:36 — INFO — Running with dbt=1.7.4
+2024-01-08 08:03:36 — INFO — Updating lock file in file path: /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project/package-lock.yml
+2024-01-08 08:03:36 — INFO — Installing dbt-labs/dbt_utils
+2024-01-08 08:03:36 — INFO — Installed from version 0.8.6
+2024-01-08 08:03:36 — INFO — Updated version available: 1.1.1
+2024-01-08 08:03:36 — INFO — Installing elementary-data/elementary
+2024-01-08 08:03:36 — INFO — Installed from version 0.13.0
+2024-01-08 08:03:36 — INFO — Updated version available: 0.13.1
+2024-01-08 08:03:36 — INFO — 
+2024-01-08 08:03:36 — INFO — Updates available for packages: ['dbt-labs/dbt_utils', 'elementary-data/elementary']                 
+Update your versions in packages.yml, then run dbt deps
+2024-01-08 08:03:36 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+[31;20m2024-01-08 08:03:40 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Encountered an error:
+Runtime Error
+  Could not find profile named 'elementary'[0m
+2024-01-08 08:03:40 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:03:43 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/clients/dbt/dbt_runner.py", line 82, in _run_command
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 174, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/clients/dbt/dbt_runner.py", line 154, in run_operation
+    success, command_output = self._run_command(
+                              ^^^^^^^^^^^^^^^^^^
+  File "/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/clients/dbt/dbt_runner.py", line 93, in _run_command
+    raise DbtCommandError(err, command_args, logs=logs)
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Encountered an error:
+Runtime Error
+  Could not find profile named 'elementary'
+2024-01-08 08:03:43 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+[31;20m2024-01-08 08:03:48 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-01-08 08:03:48 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+[31;20m2024-01-08 08:03:52 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Encountered an error:
+Runtime Error
+  Could not find profile named 'elementary'
+Please reach out to our community for help with this issue.[0m
+NoneType: None
+2024-01-08 08:17:38 — INFO — Running with edr=0.13.2
+2024-01-08 08:17:38 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:17:49 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 4274
+2024-01-08 08:17:49 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:17:53 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1879
+2024-01-08 08:17:53 — INFO — edr (0.13.2) and Elementary's dbt package (0.13.1) are compatible.
+2024-01-08 08:17:53 — DEBUG — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:17:57 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1923
+2024-01-08 08:17:57 — INFO — Elementary's database and schema: '"consultants-sf.molecule_science_pipelines_elementary"'
+2024-01-08 08:17:57 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:05 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 15451
+2024-01-08 08:18:05 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_source_freshness_results", "macro_args": {"days_back": 7, "invocations_per_test": 720}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:12 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_source_freshness_results", "macro_args": {"days_back": 7, "invocations_per_test": 720}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1815
+2024-01-08 08:18:12 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_models", "macro_args": {"exclude_elementary": true}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:18 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models", "macro_args": {"exclude_elementary": true}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 4599
+2024-01-08 08:18:18 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_sources", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:25 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_sources", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1815
+2024-01-08 08:18:25 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_exposures", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:32 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_exposures", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1815
+2024-01-08 08:18:32 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_models_runs", "macro_args": {"days_back": 7, "exclude_elementary": true}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:38 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models_runs", "macro_args": {"days_back": 7, "exclude_elementary": true}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 1815
+2024-01-08 08:18:38 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_dbt_models_test_coverage", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:44 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_dbt_models_test_coverage", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 2253
+2024-01-08 08:18:44 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_nodes_depends_on_nodes", "macro_args": {"exclude_elementary": true}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:50 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_nodes_depends_on_nodes", "macro_args": {"exclude_elementary": true}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 2575
+2024-01-08 08:18:50 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_models_latest_invocation", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:18:56 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models_latest_invocation", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 8911
+2024-01-08 08:18:56 — INFO — Running dbt --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_models_latest_invocations_data", "macro_args": {}} --project-dir /Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project
+2024-01-08 08:19:02 — DEBUG — Result bytes size for command '['dbt', '--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models_latest_invocations_data", "macro_args": {}}', '--project-dir', '/Users/nosytech/DEV/LABO/data/dbt/dbt-env/lib/python3.11/site-packages/elementary/monitor/dbt_project']' is 2273
