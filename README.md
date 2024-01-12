@@ -5,8 +5,7 @@ Welcome to your new dbt project!
 create enverinoment python for dbt:
  - python3 -m venv dbt_env
  - source dbt-env/bin/activate
- - python -m pip install dbt-core
- - python -m pip install dbt-biquery
+ - pip install -r requirements.txt
  - create file ~/.dbt/profiles.yml:
    
    ```
