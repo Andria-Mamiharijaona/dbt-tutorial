@@ -8,6 +8,7 @@ create enverinoment python for dbt:
  - python -m pip install dbt-core
  - python -m pip install dbt-biquery
  - create file ~/.dbt/profiles.yml:
+   
    ```
    dbt_poc_peakace:
     target: dev
