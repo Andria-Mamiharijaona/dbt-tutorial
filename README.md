@@ -7,7 +7,32 @@ create enverinoment python for dbt:
  - source dbt-env/bin/activate
  - python -m pip install dbt-core
  - python -m pip install dbt-biquery
- - create file ~/.dbt/profiles.yml
+ - create file ~/.dbt/profiles.yml:
+   ```
+   dbt_poc_peakace:
+    target: dev
+    outputs:
+      dev:
+        type: bigquery
+        method: service-account
+        keyfile: /Users/nosytech/.dbt/peakace_access.json # replace this with the full path to your keyfile
+        project: consultants-sf # Replace this with your project id
+        dataset: molecule_science_pipelines # Replace this with dbt_your_name, e.g. dbt_bilbo
+        threads: 1
+        timeout_seconds: 300
+        location: EU
+        priority: interactive
+  
+   elementary:
+     outputs:
+       default:
+         type: "bigquery"
+         project: "consultants-sf"
+         dataset: "molecule_science_pipelines_elementary"
+         method: service-account # Configure your auth method and add the required fields according to https://docs.getdbt.com/reference/warehouse-setups/bigquery-setup#authentication-methods
+         keyfile: /Users/nosytech/.dbt/peakace_access.json
+         threads: 1
+    ```
 
 Try running the following commands:
 - dbt run
