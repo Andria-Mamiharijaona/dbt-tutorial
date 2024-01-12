@@ -2,6 +2,13 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
+create enverinoment python for dbt:
+ - python3 -m venv dbt_env
+ - source dbt-env/bin/activate
+ - python -m pip install dbt-core
+ - python -m pip install dbt-biquery
+ - create file ~/.dbt/profiles.yml
+
 Try running the following commands:
 - dbt run
 - dbt test
