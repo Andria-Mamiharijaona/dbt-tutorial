@@ -33,6 +33,7 @@ create enverinoment python for dbt:
          keyfile: /Users/nosytech/.dbt/peakace_access.json
          threads: 1
     ```
+   - dbt debug
 
 Try running the following commands:
 - dbt run --select elementary
