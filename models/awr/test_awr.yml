@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: test_dbt_ranking_awr_prod
+    columns:
+      - name: project
+
