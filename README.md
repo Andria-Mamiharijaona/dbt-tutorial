@@ -39,6 +39,7 @@ Try running the following commands:
 - dbt run --select elementary
 - dbt run
 - dbt test
+- dbt deps (Install dbt packages specified.)
 
 
 ### Resources:
@@ -47,3 +48,5 @@ Try running the following commands:
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- Learn more about elementary [in the docs](https://docs.elementary-data.com/introduction)
+- Learn more about dbt-expectations [about dbt-expectations](https://hub.getdbt.com/calogica/dbt_expectations/latest/)
