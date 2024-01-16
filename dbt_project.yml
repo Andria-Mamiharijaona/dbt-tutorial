@@ -37,6 +37,8 @@ models:
       +materialized: view
     cwv:
       +schema: "dbt_test"
+    source_orano:
+      +schema: "dbt_test"
 
   elementary:
     +schema: "elementary"

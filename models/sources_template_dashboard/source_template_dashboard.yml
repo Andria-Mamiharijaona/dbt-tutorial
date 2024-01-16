@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: template_dashboard
+    database: consultants-sf
+    schema: template_dashboard
+    tables:
+      - name: test_cwv_prod
+        columns:
+          - name: psi
+            tests:
+              - not_null
+          - name: date
+            tests:
+              - not_null
+          - name: speed_index
+            tests:
+              - greater_than_zero
+          - name: url
+            tests:
+              - string_not_empty
