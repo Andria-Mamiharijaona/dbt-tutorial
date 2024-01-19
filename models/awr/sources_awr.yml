@@ -22,3 +22,4 @@ sources:
           - name: kpi
             tests:
               - not_null
+
